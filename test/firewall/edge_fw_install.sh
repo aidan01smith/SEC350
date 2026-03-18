@@ -9,7 +9,6 @@ if [ "$(id -g -n)" != 'vyattacfg' ] ; then
     exec sg vyattacfg -c "/bin/vbash $(readlink -f $0) $@"
 fi
 
-# Configuration commands go here VVV
 configure
 
 # Network Adapter Config
