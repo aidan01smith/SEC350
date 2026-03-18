@@ -42,15 +42,15 @@ set service dns forwarding system
 
 # NAT Config
 set nat source rule 10 description 'NAT FROM DMZ to WAN'
-set nat source rule 10 outbound-interface 'eth0'
+set nat source rule 10 outbound-interface name 'eth0'
 set nat source rule 10 source address '172.16.50.0/29'
 set nat source rule 10 translation address 'masquerade'
 set nat source rule 11 description 'NAT FROM LAN to WAN'
-set nat source rule 11 outbound-interface 'eth0'
+set nat source rule 11 outbound-interface name 'eth0'
 set nat source rule 11 source address '172.16.150.0/24'
 set nat source rule 11 translation address 'masquerade'
 set nat source rule 12 description 'NAT FROM MGMT to WAN'
-set nat source rule 12 outbound-interface 'eth0'
+set nat source rule 12 outbound-interface name 'eth0'
 set nat source rule 12 source address '172.16.200.0/28'
 set nat source rule 12 translation address 'masquerade'
 
