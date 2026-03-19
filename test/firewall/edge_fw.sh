@@ -14,7 +14,7 @@ conf
 
 # DMZ-to-LAN
 set firewall ipv4 name DMZ-to-LAN default-action drop
-set firewall ipv4 name DMZ-to-LAN enable-default-log
+set firewall ipv4 name DMZ-to-LAN default-log
 
 set firewall ipv4 name DMZ-to-LAN rule 1 action 'accept'
 set firewall ipv4 name DMZ-to-LAN rule 1 description 'Allow outbound Established traffic to LAN'
@@ -28,7 +28,7 @@ set firewall ipv4 name DMZ-to-LAN rule 10 protocol 'tcp'
 
 # DMZ-to-WAN
 set firewall ipv4 name DMZ-to-WAN default-action drop
-set firewall ipv4 name DMZ-to-WAN enable-default-log
+set firewall ipv4 name DMZ-to-WAN default-log
 
 set firewall ipv4 name DMZ-to-WAN rule 1 action 'accept'
 set firewall ipv4 name DMZ-to-WAN rule 1 description 'Allow outbound Established traffic to WAN'
@@ -41,7 +41,7 @@ set firewall ipv4 name DMZ-to-WAN rule 999 source address '172.16.50.4'
 
 # LAN-to-DMZ
 set firewall ipv4 name LAN-to-DMZ default-action drop
-set firewall ipv4 name LAN-to-DMZ enable-default-log
+set firewall ipv4 name LAN-to-DMZ default-log
 
 set firewall ipv4 name LAN-to-DMZ rule 1 action 'accept'
 set firewall ipv4 name LAN-to-DMZ rule 1 description 'Allow outbound Established traffic to DMZ'
@@ -61,13 +61,13 @@ set firewall ipv4 name LAN-to-DMZ rule 11 source address '172.16.150.10'
 
 # LAN-to-WAN
 set firewall ipv4 name LAN-to-WAN default-action drop
-set firewall ipv4 name LAN-to-WAN enable-default-log
+set firewall ipv4 name LAN-to-WAN default-log
 
 set firewall ipv4 name LAN-to-WAN rule 1 action 'accept'
 
 # WAN-to-DMZ
 set firewall ipv4 name WAN-to-DMZ default-action drop
-set firewall ipv4 name WAN-to-DMZ enable-default-log
+set firewall ipv4 name WAN-to-DMZ default-log
 
 set firewall ipv4 name WAN-to-DMZ rule 1 action 'accept'
 set firewall ipv4 name WAN-to-DMZ rule 1 description 'Allow established WAN connections to DMZ'
@@ -87,7 +87,7 @@ set firewall ipv4 name WAN-to-DMZ rule 15 protocol 'tcp'
 
 # WAN-to-LAN
 set firewall ipv4 name WAN-to-LAN default-action drop
-set firewall ipv4 name WAN-to-LAN enable-default-log
+set firewall ipv4 name WAN-to-LAN default-log
 
 set firewall ipv4 name WAN-to-LAN rule 1 action 'accept'
 set firewall ipv4 name WAN-to-LAN rule 1 description 'Allow established WAN connections to LAN'
